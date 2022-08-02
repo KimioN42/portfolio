@@ -1,6 +1,34 @@
 <template>
-    <div class="card">
-        <h1>Hello, this is my card</h1>
+    <div class="my-card-container">
+        <div class="profilepic">
+            <img src="../assets/profilepic.jpeg" class="profile-pic">
+        </div>
+        <div class="my-info">
+            <h1>Hello, world! I am Kimio Nishino :)</h1>
+            <br>
+            <br>
+            <p>I'm a full-stack web developer with a passion for creating beautiful, responsive websites. I'm currently
+                working on a project called <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">The Movie
+                    Database</a>.</p>
+        </div>
+        <div class="my-links">
+            <span>You can find me on: </span>
+            <br><br>
+            <div class="my-links-icons">
+                <a href="https://www.linkedin.com/in/kimio-nishino/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/KimioN42" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://stackoverflow.com/users/5033494/kimion42" target="_blank">
+                    <i class="fab fa-stack-overflow"></i>
+                </a>
+                <a href="https://leetcode.com/kimionishino1/" target="_blank">
+                    <i class="fa fa-code"></i>
+                </a>
+            </div>
+        </div>
 
     </div>
 </template>
@@ -9,5 +37,70 @@ export default {
 
 }
 </script>
-<style>
+<style scoped>
+.my-card-container {
+    margin: auto;
+    text-align: center;
+    vertical-align: center;
+    border: 1px solid rgb(45, 45, 45);
+    border-radius: 1em;
+    box-shadow: 10px 10px 32px 0px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    padding: 3em;
+}
+
+.profilepic {
+    padding-bottom: 1.5em;
+    /* border: 1px solid white; */
+}
+
+.profilepic img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
+    border: 1px solid rgb(45, 45, 45);
+}
+
+.my-info {
+    padding: 1em;
+    /* border: 1px solid white; */
+}
+
+.my-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: auto;
+    padding: 1em;
+    color: var(--light-mode-font);
+    /* border: 1px solid red; */
+    align-items: center;
+}
+
+.my-links-icons a {
+    font-size: 2em;
+    margin: 0.5em 0.5em;
+}
+
+.my-links-icons a:visited {
+    color: var(--light-mode-font);
+}
+
+@media (prefers-color-scheme: dark) {
+    .my-links {
+        color: var(--dark-mode-font);
+    }
+
+    .my-links a:visited {
+        color: var(--dark-mode-font);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .my-card-container {
+        width: 90%;
+        padding: 0.5em;
+    }
+}
 </style>

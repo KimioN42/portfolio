@@ -9,13 +9,13 @@
                     <router-link class="link" :to="{ name: 'home' }">Home</router-link>
                 </li>
                 <li>
-                    <router-link class="link" :to="{ name: 'myCard' }">About</router-link>
+                    <router-link class="link" :to="{ name: '' }">About</router-link>
                 </li>
                 <li>
                     <router-link class="link" :to="{ name: '' }">Projects</router-link>
                 </li>
                 <li>
-                    <router-link class="link" :to="{ name: '' }">Contact</router-link>
+                    <router-link class="link" :to="{ name: 'contact' }">Contact</router-link>
                 </li>
             </ul>
             <div class="icon">
@@ -28,13 +28,13 @@
                         <router-link class="link" :to="{ name: 'home' }">Home</router-link>
                     </li>
                     <li>
-                        <router-link class="link" :to="{ name: 'myCard' }">About</router-link>
+                        <router-link class="link" :to="{ name: '' }">About</router-link>
                     </li>
                     <li>
                         <router-link class="link" :to="{ name: '' }">Projects</router-link>
                     </li>
                     <li>
-                        <router-link class="link" :to="{ name: '' }">Contact</router-link>
+                        <router-link class="link" :to="{ name: 'contact' }">Contact</router-link>
                     </li>
                 </ul>
             </transition>
@@ -87,7 +87,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 @media (min-width: 1140px) {
     nav {
         width: 1140px;
