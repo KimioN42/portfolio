@@ -9,7 +9,7 @@
                     <router-link class="link" :to="{ name: 'home' }">Home</router-link>
                 </li>
                 <li>
-                    <router-link class="link" :to="{ name: '' }">About</router-link>
+                    <router-link class="link" :to="{ name: 'myCard' }">About</router-link>
                 </li>
                 <li>
                     <router-link class="link" :to="{ name: '' }">Projects</router-link>
@@ -28,7 +28,7 @@
                         <router-link class="link" :to="{ name: 'home' }">Home</router-link>
                     </li>
                     <li>
-                        <router-link class="link" :to="{ name: '' }">About</router-link>
+                        <router-link class="link" :to="{ name: 'myCard' }">About</router-link>
                     </li>
                     <li>
                         <router-link class="link" :to="{ name: '' }">Projects</router-link>

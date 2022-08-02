@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="card">
+        <h1>Hello, this is my card</h1>
 
     </div>
 </template>
