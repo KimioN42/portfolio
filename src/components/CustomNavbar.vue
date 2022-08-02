@@ -9,7 +9,7 @@
                     <router-link class="link" :to="{ name: 'home' }">Home</router-link>
                 </li>
                 <li>
-                    <router-link class="link" :to="{ name: '' }">About</router-link>
+                    <router-link class="link" :to="{ name: 'myCard' }">About</router-link>
                 </li>
                 <li>
                     <router-link class="link" :to="{ name: '' }">Projects</router-link>
@@ -28,7 +28,7 @@
                         <router-link class="link" :to="{ name: 'home' }">Home</router-link>
                     </li>
                     <li>
-                        <router-link class="link" :to="{ name: '' }">About</router-link>
+                        <router-link class="link" :to="{ name: 'myCard' }">About</router-link>
                     </li>
                     <li>
                         <router-link class="link" :to="{ name: '' }">Projects</router-link>
@@ -87,7 +87,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 @media (min-width: 1140px) {
     nav {
         width: 1140px;
@@ -135,8 +135,8 @@ nav .link {
 }
 
 nav .link:hover {
-    color: #00afea;
-    border-color: #00afea;
+    color: #00ea7d;
+    border-color: #00ea7d;
 }
 
 nav .branding {
@@ -175,6 +175,7 @@ nav .icon-active {
     transform: rotate(180deg);
 }
 
+/* Animation for the hamburger menu */
 nav .mobile-nav-enter-active,
 nav .mobile-nav-leave-active {
     transition: 1s ease all;
@@ -193,6 +194,7 @@ nav .mobile-nav-leave-to {
     transform: translateX(-250px);
 }
 
+/* Hamburger menu */
 .dropdown-nav {
     display: flex;
     flex-direction: column;
@@ -200,6 +202,7 @@ nav .mobile-nav-leave-to {
     width: 100%;
     max-width: 250px;
     background-color: #fff;
+    box-shadow: rgba(6px 5px 28px -4px rgba(0, 0, 0, 0.73));
     top: 0;
     left: 0;
     height: 100%;
@@ -213,6 +216,18 @@ nav .mobile-nav-leave-to {
     color: #000;
 }
 
+/* Dark mode for hamburger menu */
+@media (prefers-color-scheme: dark) {
+    .dropdown-nav {
+        background-color: var(--dark-mode-bg);
+    }
+
+    .dropdown-nav li .link {
+        color: var(--dark-mode-text);
+    }
+}
+
+/* Animation for resizing navbar when scrolling */
 .scrolled-nav {
     background-color: #000;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
