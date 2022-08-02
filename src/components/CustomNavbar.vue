@@ -87,7 +87,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 @media (min-width: 1140px) {
     nav {
         width: 1140px;
@@ -175,6 +175,7 @@ nav .icon-active {
     transform: rotate(180deg);
 }
 
+/* Animation for the hamburger menu */
 nav .mobile-nav-enter-active,
 nav .mobile-nav-leave-active {
     transition: 1s ease all;
@@ -193,6 +194,7 @@ nav .mobile-nav-leave-to {
     transform: translateX(-250px);
 }
 
+/* Hamburger menu */
 .dropdown-nav {
     display: flex;
     flex-direction: column;
@@ -213,6 +215,18 @@ nav .mobile-nav-leave-to {
     color: #000;
 }
 
+/* Dark mode for hamburger menu */
+@media (prefers-color-scheme: dark) {
+    .dropdown-nav {
+        background-color: var(--dark-mode-bg);
+    }
+
+    .dropdown-nav li .link {
+        color: var(--dark-mode-text);
+    }
+}
+
+/* Animation for resizing navbar when scrolling */
 .scrolled-nav {
     background-color: #000;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
