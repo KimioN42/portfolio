@@ -135,8 +135,8 @@ nav .link {
 }
 
 nav .link:hover {
-    color: #00afea;
-    border-color: #00afea;
+    color: #00ea7d;
+    border-color: #00ea7d;
 }
 
 nav .branding {
@@ -202,6 +202,7 @@ nav .mobile-nav-leave-to {
     width: 100%;
     max-width: 250px;
     background-color: #fff;
+    box-shadow: rgba(6px 5px 28px -4px rgba(0, 0, 0, 0.73));
     top: 0;
     left: 0;
     height: 100%;
