@@ -55,8 +55,8 @@ export default {
 }
 
 .profilepic img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 75%;
+    max-height: 75%;
     border-radius: 100%;
     border: 1px solid rgb(45, 45, 45);
 }
@@ -64,6 +64,10 @@ export default {
 .my-info {
     padding: 1em;
     /* border: 1px solid white; */
+}
+
+.my-info p a {
+    color: var(--light-mode-font);
 }
 
 .my-links {
@@ -75,11 +79,13 @@ export default {
     color: var(--light-mode-font);
     /* border: 1px solid red; */
     align-items: center;
+    color: var(--light-mode-font);
 }
 
 .my-links-icons a {
     font-size: 2em;
     margin: 0.5em 0.5em;
+    color: var(--light-mode-font);
 }
 
 .my-links-icons a:visited {
@@ -87,7 +93,15 @@ export default {
 }
 
 @media (prefers-color-scheme: dark) {
+    .my-info p a {
+        color: var(--dark-mode-font);
+    }
+
     .my-links {
+        color: var(--dark-mode-font);
+    }
+
+    .my-links-icons a {
         color: var(--dark-mode-font);
     }
 

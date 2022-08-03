@@ -25,16 +25,17 @@
             <transition name="mobile-nav">
                 <ul v-show="mobileNav" class="dropdown-nav">
                     <li>
-                        <router-link class="link" :to="{ name: 'home' }">Home</router-link>
+                        <router-link @click="toggleMobileNav" class="link" :to="{ name: 'home' }">Home</router-link>
                     </li>
                     <li>
-                        <router-link class="link" :to="{ name: '' }">About</router-link>
+                        <router-link @click="toggleMobileNav" class="link" :to="{ name: '' }">About</router-link>
                     </li>
                     <li>
-                        <router-link class="link" :to="{ name: '' }">Projects</router-link>
+                        <router-link @click="toggleMobileNav" class="link" :to="{ name: '' }">Projects</router-link>
                     </li>
                     <li>
-                        <router-link class="link" :to="{ name: 'contact' }">Contact</router-link>
+                        <router-link @click="toggleMobileNav" class="link" :to="{ name: 'contact' }">Contact
+                        </router-link>
                     </li>
                 </ul>
             </transition>

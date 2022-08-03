@@ -1,7 +1,15 @@
 <template>
-    <CustomNavbar />
-    <router-view />
-    <footer>This is a footer :)</footer>
+    <div class="container">
+        <CustomNavbar />
+        <div class="content">
+            <router-view v-slot="{ Component }">
+                <transition name="fade" mode="out-in">
+                    <component :is="Component" />
+                </transition>
+            </router-view>
+        </div>
+        <footer>This is a footer :)</footer>
+    </div>
 </template>
 
 <script>
@@ -41,9 +49,19 @@ export default {
     font-weight: 400;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+/* not working for now */
 footer {
-    position: relative;
-    bottom: 0;
+    flex-shrink: 0;
     width: 100%;
     background-color: var(--light-mode-footer);
     padding: 20px;
@@ -51,6 +69,17 @@ footer {
     font-size: 0.8rem;
     font-weight: 400;
     color: var(--light-mode-footer);
+}
+
+/* Animations for the router-views */
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.8s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
