@@ -37,7 +37,7 @@ export default {
 
     --light-mode-bg: #fff;
     --light-mode-card: #fafafa;
-    --light-mode-footer: #fafafa;
+    --light-mode-footer: #1f1f1f;
     --light-mode-font: #1a1a1a;
 }
 
@@ -61,14 +61,15 @@ export default {
 
 /* not working for now */
 footer {
-    flex-shrink: 0;
+    position: relative;
+    bottom: 0;
     width: 100%;
     background-color: var(--light-mode-footer);
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
     font-weight: 400;
-    color: var(--light-mode-footer);
+    color: var(--dark-mode-font);
 }
 
 /* Animations for the router-views */

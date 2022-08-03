@@ -2,7 +2,7 @@
     <header :class="{ 'scrolled-nav': scrolledNav }">
         <nav>
             <div class="branding">
-                <img src="../assets/logo.png">
+                <img src="../assets/kimio-logo.png">
             </div>
             <ul v-show="!mobile" class="navigation">
                 <li>
@@ -146,7 +146,7 @@ nav .branding {
 }
 
 .branding img {
-    width: 60px;
+    width: 100px;
     transition: 0.5s ease all;
 }
 
@@ -239,7 +239,7 @@ nav .mobile-nav-leave-to {
 }
 
 .scrolled-nav nav .branding img {
-    width: 40px;
+    width: 70px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 </style>
