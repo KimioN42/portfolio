@@ -4,12 +4,19 @@
             <img src="../assets/profilepic.jpeg" class="profile-pic">
         </div>
         <div class="my-info">
-            <h1>Hello, world! I am Kimio Nishino :)</h1>
+            <h1>Hey there, that's me! :)</h1>
             <br>
             <br>
-            <p>I'm a full-stack web developer with a passion for creating beautiful, responsive websites. I'm currently
-                working on a project called <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">The Movie
-                    Database</a>.</p>
+            <p> I'm a 25 years-old developer with about 2 years of professional experience mostly in back-end projects
+                (+ 4 years of college experience altogether).
+                Now transioning to a full-stack role, so I'm spending most of my days studying everything that I can
+                about web-development, back-end development as well as the best practices in the industry. I created
+                this website to showcase some of my projects and as a challenge to myself. A little bit more about me:
+                Enthusiastic and self-learning, I’m passionate about everything related to programming. Skilled at
+                thinking on my feet, and capable of learning new tasks very quickly. On my free time I love studying new
+                technologies and concepts. Currently working towards a software engineering degree at <a
+                    href="https://www.sheridancollege.ca/" target="_blank">Sheridan
+                    College</a><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">.</a></p>
         </div>
         <div class="my-links">
             <span>You can find me on: </span>

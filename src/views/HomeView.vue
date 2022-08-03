@@ -1,20 +1,23 @@
 <template>
     <div class="home-container">
         <MyCard />
-        <br>
-        <br>
-        <MyCard />
+        <br><br>
+        <h1>Some of my Projects</h1>
+        <br><br>
+        <ProjectsCard />
     </div>
 </template>
 
 <script>
 
 import MyCard from '../components/MyCard.vue'
+import ProjectsCard from '../components/ProjectsCard.vue'
 
 export default {
     name: 'HomeView',
     components: {
-        MyCard
+        MyCard,
+        ProjectsCard
     }
 }
 </script>
@@ -27,7 +30,7 @@ export default {
     margin: auto;
     text-align: center;
     padding: 6em 0em;
-    /* border: 1px solid red; */
+    /* border: 1px solid green; */
     width: 90%;
 }
 
