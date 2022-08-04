@@ -20,5 +20,6 @@ export default {
     padding: 6em 0em;
     /* border: 1px solid red; */
     width: 90%;
+    height: 93vh;
 }
 </style>

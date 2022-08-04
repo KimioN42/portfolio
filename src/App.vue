@@ -56,20 +56,24 @@ export default {
 }
 
 .content {
-    flex: 1 0 auto;
+    flex-grow: 1;
 }
 
 /* not working for now */
 footer {
     position: relative;
+    left: 0;
     bottom: 0;
     width: 100%;
+    height: 7vh;
     background-color: var(--light-mode-footer);
     padding: 20px;
     text-align: center;
     font-size: 0.8rem;
     font-weight: 400;
     color: var(--dark-mode-font);
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 /* Animations for the router-views */
