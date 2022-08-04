@@ -82,7 +82,6 @@ export default {
         // 'created' callouts
         checkScreen()
         updateScroll()
-        isHome()
 
         window.addEventListener('resize', checkScreen)
         window.addEventListener('scroll', updateScroll)

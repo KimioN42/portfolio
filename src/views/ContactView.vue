@@ -1,11 +1,13 @@
 <template>
     <div class="contact-container">
-        <h1>This is my contact page :)</h1>
+        <ContactFormVue />
     </div>
 </template>
 <script>
-export default {
+import ContactFormVue from '@/components/ContactForm.vue'
 
+export default {
+    components: { ContactFormVue }
 }
 </script>
 <style scoped>
