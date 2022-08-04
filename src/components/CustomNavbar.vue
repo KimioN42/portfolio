@@ -2,12 +2,11 @@
     <header :class="{ 'scrolled-nav': scrolledNav }">
         <nav>
             <div class="branding">
-                <h1>Kimio Nishino</h1>
+                <router-link class="link" :to="{ name: 'home' }">
+                    <h1>Kimio Nishino</h1>
+                </router-link>
             </div>
             <ul v-show="!mobile" class="navigation">
-                <li>
-                    <router-link class="link" :to="{ name: 'home' }">Home</router-link>
-                </li>
                 <li>
                     <router-link class="link" :to="{ name: '' }">About</router-link>
                 </li>
@@ -25,9 +24,6 @@
             <transition name="mobile-nav">
                 <ul v-show="mobileNav" class="dropdown-nav">
                     <li>
-                        <router-link @click="toggleMobileNav" class="link" :to="{ name: 'home' }">Home</router-link>
-                    </li>
-                    <li>
                         <router-link @click="toggleMobileNav" class="link" :to="{ name: '' }">About</router-link>
                     </li>
                     <li>
@@ -44,15 +40,39 @@
 </template>
 
 <script>
+// import { computed, ref, mounted } from 'vue'
 
 export default {
+    // setup () {
+    //     const scrolledNav = ref(null)
+    //     const mobileNav = ref(null)
+    //     const mobile = computed(() => window.innerWidth < 768)
+    //     const toggleMobileNav = () => mobileNav.value = !mobileNav.value
+    //     const toggleScrolledNav = () => scrolledNav.value = !scrolledNav.value
+    //     const onScroll = () => {
+    //         if (window.scrollY > 0) {
+    //             toggleScrolledNav()
+    //         } else {
+    //             toggleScrolledNav()
+    //         }
+    //     }
+    //     window.addEventListener('scroll', onScroll)
+    //     return {
+    //         scrolledNav,
+    //         mobileNav,
+    //         mobile,
+    //         toggleMobileNav,
+    //         toggleScrolledNav
+    //     }
+    // }
+
     name: 'CustomNavbar',
     data () {
         return {
             scrolledNav: null,
             mobile: null,
-            mobileNav: null,
-            windowWidth: null
+            mobileNav: null
+            // windowWidth: null
         }
     },
     mounted () {
@@ -77,11 +97,16 @@ export default {
         },
         updateScroll () {
             const scrollPos = window.scrollY
-            if (scrollPos > 50) {
+            if (scrollPos > 75) {
                 this.scrolledNav = true
             } else {
                 this.scrolledNav = false
             }
+        }
+    },
+    computed: {
+        isHome () {
+            return this.$route.name === 'home'
         }
     }
 }
@@ -147,6 +172,7 @@ nav .branding {
 
 .branding h1 {
     font-size: 2.70em;
+    border-bottom: 1px solid transparent;
     transition: 0.5s ease all;
 }
 

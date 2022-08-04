@@ -4,7 +4,7 @@
             <img src="../assets/profilepic.jpeg" class="profile-pic">
         </div>
         <div class="my-info">
-            <h1>Hey there, that's me! :)</h1>
+            <h1>Hello, world! (:</h1>
             <br>
             <br>
             <p> I'm a 25 years-old developer with about 2 years of professional experience mostly in back-end projects
@@ -71,6 +71,10 @@ export default {
 .my-info {
     padding: 1em;
     /* border: 1px solid white; */
+}
+
+.my-info p {
+    letter-spacing: 1px;
 }
 
 .my-info p a {
