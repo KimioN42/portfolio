@@ -17,7 +17,29 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
-    routes
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        }
+        // still need to figure out a way to scroll to hash when navigating between views...
+        // probably the transition is the issue here
+        if (to.hash) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve({
+                        el: to.hash,
+                        behavior: 'smooth'
+                    }, 5000)
+                })
+            })
+        } else {
+            return {
+                top: 0,
+                behavior: 'smooth'
+            }
+        }
+    }
 })
 
 export default router

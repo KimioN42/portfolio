@@ -1,8 +1,8 @@
 <template>
     <div class="home-container">
-        <MyCard />
+        <MyCard :id="'about'" />
         <br><br>
-        <h1>Some of my Projects</h1>
+        <h1 :id="'projects'">Some of my Projects</h1>
         <br><br>
         <ProjectsCard />
     </div>

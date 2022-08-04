@@ -80,7 +80,7 @@ footer {
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.8s ease-out;
+    transition: opacity 0.5s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
