@@ -25,7 +25,6 @@
 import jsonData from '../assets/projects.json'
 
 export default {
-    name: 'ProjectsCard',
     data () {
         return {
             projects: jsonData

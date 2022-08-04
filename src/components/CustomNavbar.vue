@@ -2,12 +2,11 @@
     <header :class="{ 'scrolled-nav': scrolledNav }">
         <nav>
             <div class="branding">
-                <img src="../assets/kimio-logo.png">
+                <router-link class="link" :to="{ name: 'home' }">
+                    <h1>Kimio Nishino</h1>
+                </router-link>
             </div>
             <ul v-show="!mobile" class="navigation">
-                <li>
-                    <router-link class="link" :to="{ name: 'home' }">Home</router-link>
-                </li>
                 <li>
                     <router-link class="link" :to="{ name: '' }">About</router-link>
                 </li>
@@ -25,9 +24,6 @@
             <transition name="mobile-nav">
                 <ul v-show="mobileNav" class="dropdown-nav">
                     <li>
-                        <router-link @click="toggleMobileNav" class="link" :to="{ name: 'home' }">Home</router-link>
-                    </li>
-                    <li>
                         <router-link @click="toggleMobileNav" class="link" :to="{ name: '' }">About</router-link>
                     </li>
                     <li>
@@ -44,44 +40,48 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 
 export default {
-    name: 'CustomNavbar',
-    data () {
-        return {
-            scrolledNav: null,
-            mobile: null,
-            mobileNav: null,
-            windowWidth: null
+    setup () {
+        // reactive data
+        const scrolledNav = ref(null)
+        const mobileNav = ref(null)
+        const mobile = ref(null)
+        const windowWidth = ref(null)
+
+        // methods
+        function toggleMobileNav () {
+            mobileNav.value = !mobileNav.value
         }
-    },
-    mounted () {
-        window.addEventListener('scroll', this.updateScroll)
-    },
-    created () {
-        window.addEventListener('resize', this.checkScreen)
-        this.checkScreen()
-    },
-    methods: {
-        toggleMobileNav () {
-            this.mobileNav = !this.mobileNav
-        },
-        checkScreen () {
-            this.windowWidth = window.innerWidth
-            if (this.windowWidth < 768) {
-                this.mobile = true
+
+        function checkScreen () {
+            windowWidth.value = window.innerWidth
+            if (windowWidth.value < 768) {
+                mobile.value = true
             } else {
-                this.mobile = false
-                this.mobileNav = false
+                mobile.value = false
             }
-        },
-        updateScroll () {
-            const scrollPos = window.scrollY
-            if (scrollPos > 50) {
-                this.scrolledNav = true
+        }
+
+        function updateScroll () {
+            if (window.scrollY > 80) {
+                scrolledNav.value = true
             } else {
-                this.scrolledNav = false
+                scrolledNav.value = false
             }
+        }
+
+        // 'created' callouts
+        window.addEventListener('resize', checkScreen)
+        window.addEventListener('scroll', updateScroll)
+
+        return {
+            scrolledNav,
+            mobileNav,
+            mobile,
+            windowWidth,
+            toggleMobileNav
         }
     }
 }
@@ -128,26 +128,33 @@ nav li {
     margin-left: 16px;
 }
 
-nav .link {
+.link {
     font-size: 14px;
     transition: 0.5s ease all;
     padding-bottom: 4px;
     border-bottom: 1px solid transparent;
 }
 
-nav .link:hover {
+.link:hover {
     color: #00ea7d;
     border-color: #00ea7d;
 }
 
-nav .branding {
+.branding {
     display: flex;
     align-items: center;
 }
 
-.branding img {
-    width: 100px;
+.branding h1 {
+    font-size: 3em;
+    border-bottom: 1px solid transparent;
     transition: 0.5s ease all;
+}
+
+@media (max-width: 365px) {
+    .branding h1 {
+        font-size: 2em;
+    }
 }
 
 .navigation {
@@ -157,7 +164,7 @@ nav .branding {
     justify-content: flex-end;
 }
 
-nav .icon {
+.icon {
     display: flex;
     align-items: center;
     position: absolute;
@@ -238,8 +245,8 @@ nav .mobile-nav-leave-to {
     padding: 8px 0;
 }
 
-.scrolled-nav nav .branding img {
-    width: 70px;
+.scrolled-nav nav .branding h1 {
+    font-size: 2em;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 </style>

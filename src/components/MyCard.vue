@@ -4,7 +4,7 @@
             <img src="../assets/profilepic.jpeg" class="profile-pic">
         </div>
         <div class="my-info">
-            <h1>Hey there, that's me! :)</h1>
+            <h1>Hello, world! (:</h1>
             <br>
             <br>
             <p> I'm a 25 years-old developer with about 2 years of professional experience mostly in back-end projects
@@ -12,7 +12,7 @@
                 Now transioning to a full-stack role, so I'm spending most of my days studying everything that I can
                 about web-development, back-end development as well as the best practices in the industry. I created
                 this website to showcase some of my projects and as a challenge to myself. A little bit more about me:
-                Enthusiastic and self-learning, I’m passionate about everything related to programming. Skilled at
+                Enthusiastic and self-learning, I'm passionate about everything related to programming. Skilled at
                 thinking on my feet, and capable of learning new tasks very quickly. On my free time I love studying new
                 technologies and concepts. Currently working towards a software engineering degree at <a
                     href="https://www.sheridancollege.ca/" target="_blank">Sheridan
@@ -73,6 +73,16 @@ export default {
     /* border: 1px solid white; */
 }
 
+.my-info p {
+    letter-spacing: 1px;
+}
+
+@media (max-width: 365px) {
+    .my-info p {
+        letter-spacing: normal;
+    }
+}
+
 .my-info p a {
     color: var(--light-mode-font);
 }
@@ -120,7 +130,6 @@ export default {
 
 @media (max-width: 768px) {
     .my-card-container {
-        width: 90%;
         padding: 0.5em;
     }
 }
