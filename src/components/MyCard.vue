@@ -77,6 +77,12 @@ export default {
     letter-spacing: 1px;
 }
 
+@media (max-width: 365px) {
+    .my-info p {
+        letter-spacing: normal;
+    }
+}
+
 .my-info p a {
     color: var(--light-mode-font);
 }

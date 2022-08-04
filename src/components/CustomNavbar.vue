@@ -153,27 +153,33 @@ nav li {
     margin-left: 16px;
 }
 
-nav .link {
+.link {
     font-size: 14px;
     transition: 0.5s ease all;
     padding-bottom: 4px;
     border-bottom: 1px solid transparent;
 }
 
-nav .link:hover {
+.link:hover {
     color: #00ea7d;
     border-color: #00ea7d;
 }
 
-nav .branding {
+.branding {
     display: flex;
     align-items: center;
 }
 
 .branding h1 {
-    font-size: 2.70em;
+    font-size: 3em;
     border-bottom: 1px solid transparent;
     transition: 0.5s ease all;
+}
+
+@media (max-width: 365px) {
+    .branding h1 {
+        font-size: 2em;
+    }
 }
 
 .navigation {
@@ -183,7 +189,7 @@ nav .branding {
     justify-content: flex-end;
 }
 
-nav .icon {
+.icon {
     display: flex;
     align-items: center;
     position: absolute;
