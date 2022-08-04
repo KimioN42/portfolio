@@ -2,7 +2,7 @@
     <header :class="{ 'scrolled-nav': scrolledNav }">
         <nav>
             <div class="branding">
-                <img src="../assets/kimio-logo.png">
+                <h1>Kimio Nishino</h1>
             </div>
             <ul v-show="!mobile" class="navigation">
                 <li>
@@ -145,8 +145,8 @@ nav .branding {
     align-items: center;
 }
 
-.branding img {
-    width: 100px;
+.branding h1 {
+    font-size: 2.70em;
     transition: 0.5s ease all;
 }
 
@@ -238,8 +238,8 @@ nav .mobile-nav-leave-to {
     padding: 8px 0;
 }
 
-.scrolled-nav nav .branding img {
-    width: 70px;
+.scrolled-nav nav .branding h1 {
+    font-size: 2em;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 </style>
