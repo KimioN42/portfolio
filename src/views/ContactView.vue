@@ -1,11 +1,13 @@
 <template>
     <div class="contact-container">
-        <h1>This is my contact page :)</h1>
+        <ContactFormVue />
     </div>
 </template>
 <script>
-export default {
+import ContactFormVue from '@/components/ContactForm.vue'
 
+export default {
+    components: { ContactFormVue }
 }
 </script>
 <style scoped>
@@ -18,5 +20,6 @@ export default {
     padding: 6em 0em;
     /* border: 1px solid red; */
     width: 90%;
+    height: 93vh;
 }
 </style>
