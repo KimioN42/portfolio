@@ -73,6 +73,7 @@ export default {
         }
 
         // 'created' callouts
+        checkScreen()
         window.addEventListener('resize', checkScreen)
         window.addEventListener('scroll', updateScroll)
 
