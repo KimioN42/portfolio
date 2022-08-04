@@ -7,27 +7,29 @@
                 </router-link>
             </div>
             <ul v-show="!mobile" class="navigation">
-                <li>
-                    <router-link class="link" :to="{ name: '' }">About</router-link>
+                <li v-if="isHome()">
+                    <router-link class="link" :to="{ name: 'home', hash: '#about' }">About</router-link>
                 </li>
-                <li>
-                    <router-link class="link" :to="{ name: '' }">Projects</router-link>
+                <li v-if="isHome()">
+                    <router-link class="link" :to="{ name: 'home', hash: '#projects' }">Projects</router-link>
                 </li>
                 <li>
                     <router-link class="link" :to="{ name: 'contact' }">Contact</router-link>
                 </li>
             </ul>
-            <div class="icon">
+            <div class="icon" v-if="isHome()">
                 <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{ 'icon-active': mobileNav }">
                 </i>
             </div>
             <transition name="mobile-nav">
-                <ul v-show="mobileNav" class="dropdown-nav">
-                    <li>
-                        <router-link @click="toggleMobileNav" class="link" :to="{ name: '' }">About</router-link>
+                <ul v-if="mobileNav" class="dropdown-nav">
+                    <li @click="toggleMobileNav">
+                        <router-link class="link" :to="{ name: 'home', hash: '#about' }">About
+                        </router-link>
                     </li>
-                    <li>
-                        <router-link @click="toggleMobileNav" class="link" :to="{ name: '' }">Projects</router-link>
+                    <li @click="toggleMobileNav">
+                        <router-link class="link" :to="{ name: 'home', hash: '#projects' }">
+                            Projects</router-link>
                     </li>
                     <li>
                         <router-link @click="toggleMobileNav" class="link" :to="{ name: 'contact' }">Contact
@@ -41,6 +43,7 @@
 
 <script>
 import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
 export default {
     setup () {
@@ -72,8 +75,15 @@ export default {
             }
         }
 
+        function isHome () {
+            return useRoute().name === 'home'
+        }
+
         // 'created' callouts
         checkScreen()
+        updateScroll()
+        isHome()
+
         window.addEventListener('resize', checkScreen)
         window.addEventListener('scroll', updateScroll)
 
@@ -82,7 +92,8 @@ export default {
             mobileNav,
             mobile,
             windowWidth,
-            toggleMobileNav
+            toggleMobileNav,
+            isHome
         }
     }
 }
