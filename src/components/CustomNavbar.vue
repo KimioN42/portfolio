@@ -40,73 +40,48 @@
 </template>
 
 <script>
-// import { computed, ref, mounted } from 'vue'
+import { ref } from 'vue'
 
 export default {
-    // setup () {
-    //     const scrolledNav = ref(null)
-    //     const mobileNav = ref(null)
-    //     const mobile = computed(() => window.innerWidth < 768)
-    //     const toggleMobileNav = () => mobileNav.value = !mobileNav.value
-    //     const toggleScrolledNav = () => scrolledNav.value = !scrolledNav.value
-    //     const onScroll = () => {
-    //         if (window.scrollY > 0) {
-    //             toggleScrolledNav()
-    //         } else {
-    //             toggleScrolledNav()
-    //         }
-    //     }
-    //     window.addEventListener('scroll', onScroll)
-    //     return {
-    //         scrolledNav,
-    //         mobileNav,
-    //         mobile,
-    //         toggleMobileNav,
-    //         toggleScrolledNav
-    //     }
-    // }
+    setup () {
+        // reactive data
+        const scrolledNav = ref(null)
+        const mobileNav = ref(null)
+        const mobile = ref(null)
+        const windowWidth = ref(null)
 
-    name: 'CustomNavbar',
-    data () {
+        // methods
+        function toggleMobileNav () {
+            mobileNav.value = !mobileNav.value
+        }
+
+        function checkScreen () {
+            windowWidth.value = window.innerWidth
+            if (windowWidth.value < 768) {
+                mobile.value = true
+            } else {
+                mobile.value = false
+            }
+        }
+
+        function updateScroll () {
+            if (window.scrollY > 80) {
+                scrolledNav.value = true
+            } else {
+                scrolledNav.value = false
+            }
+        }
+
+        // 'created' callouts
+        window.addEventListener('resize', checkScreen)
+        window.addEventListener('scroll', updateScroll)
+
         return {
-            scrolledNav: null,
-            mobile: null,
-            mobileNav: null
-            // windowWidth: null
-        }
-    },
-    mounted () {
-        window.addEventListener('scroll', this.updateScroll)
-    },
-    created () {
-        window.addEventListener('resize', this.checkScreen)
-        this.checkScreen()
-    },
-    methods: {
-        toggleMobileNav () {
-            this.mobileNav = !this.mobileNav
-        },
-        checkScreen () {
-            this.windowWidth = window.innerWidth
-            if (this.windowWidth < 768) {
-                this.mobile = true
-            } else {
-                this.mobile = false
-                this.mobileNav = false
-            }
-        },
-        updateScroll () {
-            const scrollPos = window.scrollY
-            if (scrollPos > 75) {
-                this.scrolledNav = true
-            } else {
-                this.scrolledNav = false
-            }
-        }
-    },
-    computed: {
-        isHome () {
-            return this.$route.name === 'home'
+            scrolledNav,
+            mobileNav,
+            mobile,
+            windowWidth,
+            toggleMobileNav
         }
     }
 }
