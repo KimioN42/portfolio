@@ -41,7 +41,7 @@
     </header>
 </template>
 
-<script>
+<scriptz>
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 
