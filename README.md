@@ -1,5 +1,9 @@
 # portfolio
 
+##Netlify
+
+https://kimio-nishino.netlify.app/
+
 ## Project setup
 ```
 npm install
