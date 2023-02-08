@@ -1,22 +1,31 @@
 {
-    "ProjectsArray": [
-        {
-            "id": 1,
-            "name": "eShop using vanilla JavaScript",
-            "description": "An e-Store using purely vanilla JavaScript lorem",
-            "githubLink": "https://github.com/KimioN42/V5-Vanilla-eShop",
-            "liveLink": "https://v5-vanilla-eshop.netlify.app/",
-            "image": "https://user-images.githubusercontent.com/12988560/181870546-607a8b96-aa39-49e5-8468-0b9384f505b2.png",
-            "alt": "Screenshot of the live link on Netlify"
-        },
-        {
-            "id": 2,
-            "name": "Google page",
-            "description": "A recreation of the Google homepage using vanilla javascript",
-            "githubLink": "https://github.com/KimioN42/Fullstack-v5-Challenges",
-            "liveLink": "https://js-google.netlify.app/",
-            "image": "https://user-images.githubusercontent.com/12988560/182503574-71968b7f-c278-4d18-8ad7-bdf7f1486aa8.png",
-            "alt": "Screenshot of the live link on Netlify"
-        }
-    ]
+  "ProjectsArray": [
+    {
+      "id": 1,
+      "name": "PokeApi App",
+      "description": "A fun tech project that uses the PokeApi to display pokemon data, made with React, as part of a coding challenge for a job application",
+      "githubLink": "https://github.com/KimioN42/pokedex/tree/main/react-ts-starter",
+      "liveLink": "https://pokeform.netlify.app/",
+      "image": "https://user-images.githubusercontent.com/12988560/217123263-21238800-617e-437a-abdb-712abbcaa206.png",
+      "alt": "Screenshot of the live link on Netlify"
+    },
+    {
+      "id": 2,
+      "name": "eShop using vanilla JavaScript",
+      "description": "An e-Store using purely vanilla JavaScript lorem",
+      "githubLink": "https://github.com/KimioN42/V5-Vanilla-eShop",
+      "liveLink": "https://v5-vanilla-eshop.netlify.app/",
+      "image": "https://user-images.githubusercontent.com/12988560/181870546-607a8b96-aa39-49e5-8468-0b9384f505b2.png",
+      "alt": "Screenshot of the live link on Netlify"
+    },
+    {
+      "id": 3,
+      "name": "Google page",
+      "description": "A recreation of the Google homepage using vanilla javascript",
+      "githubLink": "https://github.com/KimioN42/Fullstack-v5-Challenges",
+      "liveLink": "https://js-google.netlify.app/",
+      "image": "https://user-images.githubusercontent.com/12988560/182503574-71968b7f-c278-4d18-8ad7-bdf7f1486aa8.png",
+      "alt": "Screenshot of the live link on Netlify"
+    }
+  ]
 }
