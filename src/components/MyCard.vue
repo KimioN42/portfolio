@@ -8,17 +8,22 @@
       <br />
       <br />
       <p>
-        I'm a 25 years-old developer with about 2 years of professional
-        experience mostly in back-end projects (+ 4 years of college experience
-        altogether). Now transitioning to a full-stack role, so I'm spending
-        most of my days studying everything that I can about web-development,
-        back-end development as well as the best practices in the industry. I
-        created this website to showcase some of my projects and as a challenge
-        to myself. A little bit more about me: Enthusiastic and self-learning,
-        I'm passionate about everything related to programming. Skilled at
-        thinking on my feet, and capable of learning new tasks very quickly. On
-        my free time I love studying new technologies and concepts. I just
-        recently graduated with a software engineering degree at
+        Embarking on a dynamic career trajectory, I am a 26-year-old developer
+        harnessing nearly three years of professional expertise primarily in
+        back-end projects, complemented by a robust four-year academic journey.
+        Currently, I am in the exciting phase of transitioning to a full-stack
+        role, dedicating my days to an intensive study of web development,
+        back-end intricacies, and industry best practices. This website stands
+        as a testament to my commitment and serves as a personal challenge,
+        showcasing a curated selection of projects that reflect my evolving
+        skills and passion for programming. Characterized by enthusiasm and a
+        self-driven learning approach, I thrive on the constant pursuit of
+        knowledge. Adaptability is my forte, adept at thinking on my feet and
+        swiftly mastering new challenges. Beyond the professional realm, my free
+        time is devoted to delving into the latest technologies and conceptual
+        frameworks, further fueling my passion for the ever-evolving landscape
+        of programming. I just recently graduated with a software engineering
+        degree at
         <a href="https://www.sheridancollege.ca/" target="_blank"
           >Sheridan College</a
         >, and currently working as a fullstack developer at

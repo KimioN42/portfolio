@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "PokeApi App",
-      "description": "A fun tech project that uses the PokeApi to display pokemon data, made with React, as part of a coding challenge for a job application",
+      "description": "Unveiling an engaging tech endeavor designed to capture the essence of Pokémon fandom! This playful project taps into the vast universe of Pokémon using the PokeAPI, showcasing intricate Pokémon data in a lively interface. Developed with React, this creation serves as a vibrant testament to the fusion of technology and entertainment. Crafted as part of a coding challenge for a job application, it exemplifies both coding prowess and creativity. Dive into a user-friendly experience where React's component-based architecture seamlessly integrates with the dynamic PokeAPI, bringing Pokémon data to life. Whether you're a Pokémon enthusiast or a tech aficionado, this project strikes a harmonious balance, demonstrating technical skill, creative flair, and a passion for innovation.",
       "githubLink": "https://github.com/KimioN42/pokedex/tree/main/react-ts-starter",
       "liveLink": "https://pokeform.netlify.app/",
       "image": "https://user-images.githubusercontent.com/12988560/217123263-21238800-617e-437a-abdb-712abbcaa206.png",
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "name": "eShop using vanilla JavaScript",
-      "description": "An e-Store using purely vanilla JavaScript lorem",
+      "description": "Presenting a dynamic e-commerce showcase crafted with the power of pure vanilla JavaScript. This project stands as a testament to the foundational principles of web development, as it meticulously brings to life an intuitive online shopping experience without the aid of external frameworks. From seamlessly displaying product details through dynamic content retrieval to managing an interactive shopping cart with real-time updates, every aspect of this e-store is meticulously implemented using native JavaScript. The user journey is enhanced with a straightforward authentication system, ensuring secure login and registration processes. Explore the elegance of a secure payment form, responsive design, and robust error handling, all meticulously woven into this vanilla JavaScript e-Store. This project not only demonstrates technical proficiency but also underscores a commitment to understanding the core mechanics of web development.",
       "githubLink": "https://github.com/KimioN42/V5-Vanilla-eShop",
       "liveLink": "https://v5-vanilla-eshop.netlify.app/",
       "image": "https://user-images.githubusercontent.com/12988560/181870546-607a8b96-aa39-49e5-8468-0b9384f505b2.png",
@@ -21,7 +21,7 @@
     {
       "id": 3,
       "name": "Google page",
-      "description": "A recreation of the Google homepage using vanilla javascript",
+      "description": "Introducing a nostalgic homage to the familiar and functional—the recreation of the Google homepage using the simplicity and versatility of vanilla JavaScript. This project pays homage to the iconic design of Google's search interface while showcasing the power of native JavaScript to replicate interactive elements. From the search bar functionality to the 'I'm Feeling Lucky' button, every detail has been meticulously crafted without the assistance of external libraries or frameworks. This endeavor serves not only as a technical showcase but also as a creative exploration of web development fundamentals. Immerse yourself in the familiar Google experience, reimagined through the lens of vanilla JavaScript, illustrating the potential of this versatile language in recreating beloved digital interfaces.",
       "githubLink": "https://github.com/KimioN42/Fullstack-v5-Challenges",
       "liveLink": "https://js-google.netlify.app/",
       "image": "https://user-images.githubusercontent.com/12988560/182503574-71968b7f-c278-4d18-8ad7-bdf7f1486aa8.png",
